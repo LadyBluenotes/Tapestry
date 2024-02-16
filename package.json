@@ -1,5 +1,5 @@
 {
-  "name": "Tapestry",
+  "name": "tapestry",
   "type": "module",
   "scripts": {
     "dev": "vinxi dev",

@@ -9,16 +9,16 @@ export const Header = () => {
     
     return(
         <header
-          class="my-5 padding-2 text-XL flex items-center gap-4"
-          classList={{"bg-white": darkTheme(), "text-white": darkTheme()}}
+          class="my-5 p-2 text-XL flex items-center gap-4"
+          classList={{"bg-indigo-900": darkTheme(), "text-white": darkTheme()}}
         >
           <span
-            class="material-symbols-outlined text-black cursor-pointer"
+            class="material-symbols-outlined cursor-pointer"
             onclick={toggleTheme}
           >
-            dark_mode
+            light_mode
           </span>
-          <h1 class="text-white">Project: Tapestry</h1>
+          <h1>Project: Tapestry</h1>
         </header>
     );
 }
