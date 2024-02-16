@@ -1,13 +1,14 @@
-import bannerPhoto from './public/Assets/Tapestry_Bannerv1_3.png'
+import bannerPhoto from '/public/Assets/Tapestry_Bannerv1_3.png'
 
 export const Banner = () => {
     return(
         <span>
-            <img class="rounded-md my-5"
+            <img class="rounded-md p-2 my-5"
             src={bannerPhoto}
             alt="site banner"
             />
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, perspiciatis.</p>
+            <p>"Timelines are born from each moment — we live on one thread woven into a vast tapestry."</p>
+            <p>"Paths only end when we stop walking."</p>
 
         </span>
     );
