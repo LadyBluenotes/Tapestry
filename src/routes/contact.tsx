@@ -1,6 +1,6 @@
 export default function Contact() {
     return(
-    <main class="text-center mx-auto p-4">
+    <main class="bg-DarkPurple text-center mx-auto text-CosmicLatte p-4">
       <h2 class="max-6-xs text-6xl font-thin uppercase my-16">
         Contact
       </h2>
