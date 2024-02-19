@@ -1,4 +1,4 @@
-import bannerPhoto from '/public/Assets/Tapestry_Bannerv1_3.png'
+import bannerPhoto from '/Assets/Tapestry_Bannerv1_3.png'
 
 export const Banner = () => {
     return(
