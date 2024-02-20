@@ -2,20 +2,20 @@ import { A } from "@solidjs/router";
 import Card from "~/components/Card";
 import { Banner } from "~/components/Layout/Banner";
 
-import { Header } from "~/components/Layout/Header";
-
 export default function Home() {
   return (
-    <main class="bg-DarkPurple text-center mx-auto text-CosmicLatte p-4">
-      <Header />
+    <main>
       <Banner />
-      <span class="grid grid-cols-3 gap-10 my-3">
+      <span class="grid grid-cols-3 gap-8 my-9">
         <Card>
           <h2>
             Authenticate with Bungie
           </h2>
           <p>
             Login with your Bungie account to see missing flair and sort through your collection!
+          </p>
+          <p>
+            This will split into 3 cards - each character slot - if user is alreaday signed in
           </p>
         </Card>
         <Card>

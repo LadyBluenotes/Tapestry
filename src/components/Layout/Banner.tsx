@@ -3,7 +3,7 @@ import bannerPhoto from '/Assets/Tapestry_Bannerv1_3.png'
 export const Banner = () => {
     return(
         <span>
-            <img class="rounded-md p-2 my-5"
+            <img class="mx-auto rounded-md p-3 my-5"
             src={bannerPhoto}
             alt="site banner"
             />
