@@ -14,11 +14,14 @@ export default function Nav() {
       function toggleTheme() {
           setDarkTheme(!darkTheme())
       }
+
   return (
-    <nav class="bg-OxfordBlue rounded-md">
+    <nav class="bg-OxfordBlue rounded-md"
+        classList={{"bg-Silver": darkTheme()}}
+        >
       <ul class="container flex items-center p-5 mx-auto text-CosmicLatte"
-          classList={{"bg-Silver": darkTheme(), "text-DarkPurple": darkTheme()}}
-      >
+          classList={{"text-DarkPurple": darkTheme()}}
+          >
         <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-12`}>
           <a href="/">Home</a>
         </li>
@@ -40,11 +43,11 @@ export default function Nav() {
         <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-12`}>
           <a href="/about">About</a>
         </li>
-        <Searchbar></Searchbar>
+        <Searchbar />
         <span class="material-symbols-outlined cursor-pointer ml-auto" 
         onclick={toggleTheme}
         >
-          dark_mode
+          light_mode
 
         </span>
       </ul>
@@ -52,3 +55,4 @@ export default function Nav() {
     </nav>
   );
 }
+
