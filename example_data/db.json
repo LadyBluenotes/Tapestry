@@ -1,0 +1,26 @@
+{
+    "shaders":[
+        {
+            "id": 1,
+            "title": "Descendant Vex Chrome",
+            "defaults": "Omega Mechanos Set [Warlock]",
+            "source": "Bright Engrams",
+            "unlockable": "N/A",
+            "description": "Black Brown Gold Green",
+            "pattern": "Mossy Rusted Worn",
+            "sfx": "N/A",
+            "symbol": "Osiris"
+        },
+        {
+            "id": 2,
+            "title": "Blueshift Dreams",
+            "defaults": "N/A?",
+            "source": "Dismantle Gear w/ Shader",
+            "unlockable": "Dreaming City Gear",
+            "description": "Blue Black Gray",
+            "pattern": "Ripples Waves",
+            "sfx": "Animated",
+            "symbol": "Forsaken"
+        }
+    ]
+}

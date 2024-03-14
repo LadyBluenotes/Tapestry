@@ -6,21 +6,21 @@ export default function Vendors() {
       <h1 class="max-6-xs text-6xl font-thin uppercase my-16">
         Vendors
       </h1>
-      <p class ="grid grid-cols-3 gap-10 my-3">
+      <p class ="grid grid-cols-3 gap-12 p-4 my-3">
         <Card>
           <h2>
             Ada-1
           </h2>
           <p>
-            Currently Available at Ada-1
+            Armor + Shaders currently available at Ada-1
           </p>
         </Card>
         <Card>
           <h2>
-            Tess Everes
+            Tess Everis
           </h2>
           <p>
-            Currently Available at Tess [Bright Dust]
+            Ornaments and Shaders currently available at Tess [Bright Dust]
           </p>
         </Card>
         <Card>
@@ -28,7 +28,7 @@ export default function Vendors() {
             Xur
           </h2>
           <p>
-            Currently Available at Xur
+            Armor currently available at Traveling-Xur
           </p>
         </Card>
       </p>
@@ -36,7 +36,7 @@ export default function Vendors() {
         Missing Armor Pieces
       </h3>
       <p>
-        World Vendors containing armor not already in collections will be listed here
+        World Vendors containing armor not already in collections listed here
       </p>
     </main>
     )

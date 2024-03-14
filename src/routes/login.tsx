@@ -1,3 +1,4 @@
+import BungieAuth from "~/components/BungiePieces/BungieAuth";
 import Card from "~/components/Card";
 
 
@@ -10,11 +11,14 @@ export default function Login() {
       <p>
         Sign in and authorize with Bungie to view your guardians, favorite shaders, and check vendors for missing flair!
       </p>
+      <p class="my-20 mx-20">
       <Card>
         <h2>
-          Bungie.net Auth
+          <BungieAuth />
         </h2>
+       
       </Card>
+      </p>
     </main>
     )
 }

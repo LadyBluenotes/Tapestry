@@ -6,8 +6,7 @@ export default function Guardians() {
       <h1 class="max-6-xs text-6xl font-thin uppercase my-16">
         Guardians
       </h1>
-      <p>This will contain a login redirect if user is not signed in</p>
-      <p class="grid grid-cols-3 gap-10 my-3">
+      <p class="grid grid-cols-3 gap-12 p-4 my-3">
         <Card>
           <h2>
             Warlock
@@ -24,6 +23,7 @@ export default function Guardians() {
           </h2>
         </Card>
       </p>
+      <p>This will contain a login redirect if user is not signed in</p>
     </main>
     )
 }

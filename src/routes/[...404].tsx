@@ -7,7 +7,7 @@ export default function NotFound() {
         Not Found
       </h1>
       <p class="mt-8">
-       You were killed by The Architects
+       Page killed by The Architects
       </p>
       <p class="my-4">
         <A href="/" class="text-sky-600 hover:underline">

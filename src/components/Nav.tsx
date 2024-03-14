@@ -8,7 +8,7 @@ export default function Nav() {
   const active = (path: string) =>
     path == location.pathname
       ? "border-MayaBlue"
-      : "border-transparent hover:AlloyOrange";
+      : "border-transparent";
       const [darkTheme, setDarkTheme] = createSignal(false)
 
       function toggleTheme() {
@@ -19,28 +19,28 @@ export default function Nav() {
     <nav class="bg-OxfordBlue rounded-md"
         classList={{"bg-Silver": darkTheme()}}
         >
-      <ul class="container flex items-center p-5 mx-auto text-CosmicLatte"
+      <ul class="container flex items-center p-2 mx-auto text-CosmicLatte"
           classList={{"text-DarkPurple": darkTheme()}}
           >
-        <li class={`border-b-2 ${active("/")} mx-1.5 sm:mx-12`}>
+        <li class={`border-b-2 ${active("/")} mx-1 sm:mx-11`}>
           <a href="/">Home</a>
         </li>
-        <li class={`border-b-2 ${active("/login")} mx-1.5 sm:mx-12`}>
+        <li class={`border-b-2 ${active("/login")} mx-1 sm:mx-11`}>
           <a href="/login">Login</a>
         </li>
-        <li class={`border-b-2 ${active("/guardians")} mx-1.5 sm:mx-12`}>
+        <li class={`border-b-2 ${active("/guardians")} mx-1 sm:mx-11`}>
           <a href="/guardians">Guardians</a>
         </li>
-        <li class={`border-b-2 ${active("/vendors")} mx-1.5 sm:mx-12`}>
+        <li class={`border-b-2 ${active("/vendors")} mx-1 sm:mx-11`}>
           <a href="/vendors">Vendors</a>
         </li>
-        <li class={`border-b-2 ${active("/contact")} mx-1.5 sm:mx-12`}>
+        <li class={`border-b-2 ${active("/contact")} mx-1 sm:mx-11`}>
           <a href="/contact">Contact</a>
         </li>
-        <li class={`border-b-2 ${active("/donate")} mx-1.5 sm:mx-12`}>
+        <li class={`border-b-2 ${active("/donate")} mx-1 sm:mx-11`}>
           <a href="/donate">Donate</a>
         </li>
-        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-12`}>
+        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-11`}>
           <a href="/about">About</a>
         </li>
         <Searchbar />
