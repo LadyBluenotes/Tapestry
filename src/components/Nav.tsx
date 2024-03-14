@@ -1,58 +1,72 @@
-import { useLocation } from "@solidjs/router";
-import { createSignal } from "solid-js";
+import { A, useLocation } from "@solidjs/router";
+import { Component, For, createSignal } from "solid-js";
 import Searchbar from "./Searchbar";
 
+type NavProps = {
+	darkTheme: boolean;
+	setDarkTheme: (value: boolean) => void;
+};
 
-export default function Nav() {
-  const location = useLocation();
-  const active = (path: string) =>
-    path == location.pathname
-      ? "border-MayaBlue"
-      : "border-transparent";
-      const [darkTheme, setDarkTheme] = createSignal(false)
+export const Nav: Component<NavProps> = (props) => {
+	const location = useLocation();
 
-      function toggleTheme() {
-          setDarkTheme(!darkTheme())
-      }
+	const navLinks = [
+		{
+			name: "Home",
+			path: "/",
+		},
+		{
+			name: "Login",
+			path: "/login",
+		},
+		{
+			name: "Guardians",
+			path: "/guardians",
+		},
+		{
+			name: "Vendors",
+			path: "/vendors",
+		},
+		{
+			name: "Contact",
+			path: "/contact",
+		},
+		{
+			name: "Donate",
+			path: "/donate",
+		},
+		{
+			name: "About",
+			path: "/about",
+		},
+	];
 
-  return (
-    <nav class="bg-OxfordBlue rounded-md"
-        classList={{"bg-Silver": darkTheme()}}
-        >
-      <ul class="container flex items-center p-2 mx-auto text-CosmicLatte"
-          classList={{"text-DarkPurple": darkTheme()}}
-          >
-        <li class={`border-b-2 ${active("/")} mx-1 sm:mx-11`}>
-          <a href="/">Home</a>
-        </li>
-        <li class={`border-b-2 ${active("/login")} mx-1 sm:mx-11`}>
-          <a href="/login">Login</a>
-        </li>
-        <li class={`border-b-2 ${active("/guardians")} mx-1 sm:mx-11`}>
-          <a href="/guardians">Guardians</a>
-        </li>
-        <li class={`border-b-2 ${active("/vendors")} mx-1 sm:mx-11`}>
-          <a href="/vendors">Vendors</a>
-        </li>
-        <li class={`border-b-2 ${active("/contact")} mx-1 sm:mx-11`}>
-          <a href="/contact">Contact</a>
-        </li>
-        <li class={`border-b-2 ${active("/donate")} mx-1 sm:mx-11`}>
-          <a href="/donate">Donate</a>
-        </li>
-        <li class={`border-b-2 ${active("/about")} mx-1.5 sm:mx-11`}>
-          <a href="/about">About</a>
-        </li>
-        <Searchbar />
-        <span class="material-symbols-outlined cursor-pointer ml-auto" 
-        onclick={toggleTheme}
-        >
-          light_mode
-
-        </span>
-      </ul>
-
-    </nav>
-  );
-}
-
+	return (
+		<nav class="dark:bg-OxfordBlue rounded-md bg-Silver">
+			<ul class="container flex items-center p-2 mx-auto dark:text-CosmicLatte text-DarkPurple">
+				<For each={navLinks}>
+					{(link) => (
+						<li>
+							<A
+								class="border-b-2 mx-1 sm:mx-11"
+								activeClass="border-MayaBlue"
+								inactiveClass="border-none"
+								href={link.path}
+								end
+							>
+								{link.name}
+							</A>
+						</li>
+					)}
+				</For>
+				<Searchbar />
+				<button
+					class="material-symbols-outlined cursor-pointer ml-auto"
+					onclick={() => props.setDarkTheme(!props.darkTheme)}
+				>
+					light_mode
+				</button>
+			</ul>
+		</nav>
+	);
+};
